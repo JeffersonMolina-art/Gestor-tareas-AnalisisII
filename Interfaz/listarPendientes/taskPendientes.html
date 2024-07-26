@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Tareas-pendientes</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/index.html">Listar notas</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/listarPendientes/taskPendientes.html">Listar pendientes</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/listarCompletadas/taskCompletadas.html">Listar completadas</a>
+              </li>
+            </ul>
+          </div>
+          <button id="add-tasks" class="btn btn-primary">Nueva tarea</button>
+        </div>
+      </nav>
+      <h2>Listar tareas pendientes</h2>
+      <div class="listar-tasks">
+          <table class="table">
+              <thead>
+                  <tr>
+                      <th>Titulo</th>
+                      <th>Contenido</th>
+                      <th>Estado</th>
+                      <th>Fecha</th>
+                      <th>Acciones</th>
+                  </tr>
+              </thead>
+              <tbody class="content-task"></tbody>
+          </table>
+      </div>
+      <div id="update-task" class="modal">
+          <div class="modal-content">
+            <span id="close-update" class="close">&times;</span>
+            <h2>Actualizar Tarea</h2>
+            <label for="upd-titulo">Titulo:</label>
+            <input type="text" name="upd-titulo" id="upd-titulo">
+            <br>
+            <label for="upd-contenido">Contenido:</label><br>
+            <textarea name="upd-contenido" id="upd-contenido" rows="4" cols="50" placeholder="Contenido de la tarea"></textarea><br>
+            <label for="upd-estado">Estado:</label>
+            <select name="upd-estado" id="upd-estado">
+              <option value="completada">Completada</option>
+              <option value="pendiente">Pendiente</option>
+            </select>
+            <label for="upd-fecha">Fecha:</label>
+            <input type="date" name="upd-fecha" id="upd-fecha">
+            <br>
+            <button id="update" class="btn btn-primary">Actualizar</button>
+          </div>
+        </div>
+
+        <div id="add-task" class="modal">
+            <div class="modal-content">
+              <span id="close-add" class="close">&times;</span>
+              <h2>Añadir Tarea</h2>
+              <label for="titulo">Titulo:</label>
+              <input type="text" name="titulo" id="titulo">
+              <br>
+              <label for="contenido">Contenido:</label><br>
+              <textarea name="contenido" id="contenido" rows="4" cols="50" placeholder="Contenido de la tarea"></textarea><br>
+              <label for="estado">Estado:</label>
+              <select name="estado" id="estado">
+                <option value="completada">Completada</option>
+                <option value="pendiente">Pendiente</option>
+              </select>
+              <label for="fecha">Fecha:</label>
+              <input type="date" name="fecha" id="fecha">
+              <br>
+              <button id="add" class="btn btn-primary">Añadir</button>
+            </div>
+</body>
+</html>
